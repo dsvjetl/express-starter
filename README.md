@@ -1,6 +1,6 @@
-# Express TypeScript SQLite Project
+# Express REST API Starter
 
-A modern boilerplate for building Express applications using TypeScript, ESM, and TypeORM with SQLite.
+A modern boilerplate for building Express REST API applications using TypeScript, ESM, and TypeORM with SQLite.
 
 ## Features
 
