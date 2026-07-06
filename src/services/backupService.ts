@@ -9,7 +9,7 @@ export function performBackup() {
   const backupFileName = `backup-${timestamp}.sqlite`;
   const backupPath = path.join(BACKUP_DIR, backupFileName);
 
-  // Ensure backup directory exists (in case it was deleted)
+  // Ensure a backup directory exists (in case it was deleted)
   if (!fs.existsSync(BACKUP_DIR)) {
     fs.mkdirSync(BACKUP_DIR, { recursive: true });
   }
@@ -22,7 +22,7 @@ export function performBackup() {
     fs.copyFileSync(DB_FILE, backupPath);
     console.log(`Database backup created: ${backupPath}`);
 
-    // Optional: Keep only last 7 backups
+    // Optional: Keep only the last 7 backups
     cleanOldBackups();
   } catch (error) {
     console.error('Database backup failed:', error);
